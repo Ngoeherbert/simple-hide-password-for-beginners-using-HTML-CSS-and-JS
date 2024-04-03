@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment in JS</title>
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css">
+</head>
+<style>
+    .wrapper{
+        height: 50vh;
+        width: 55vh;
+    }
+    
+    .profile{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        overflow: hidden;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .icons{
+        margin-top: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(229, 229, 229);
+    }
+    
+    span{
+        font-size: 18px;
+        font-weight: 700;
+    }
+</style>
+<body>
+   <div class="wrapper">
+    <h1>POST</h1>
+    <div class="profile">
+        <img src="https://www.imgacademy.com/sites/default/files/ncsa-homepage-row-2022.jpg" alt="">
+    </div>
+    <div class="icons">
+        <div class="thumb">
+            <i id="thumbs-up" class="fas fa-thumbs-up"></i>
+        </div>
+        <i class=" fas fa-comment"></i>
+        <i class="fas fa-share"></i>
+    </div>
+   </div>
+</body>
+<script>
+    var thumbs = document.getElementById("thumbs-up");
+    var likes = document.getElementById('likes');
+    likes = 0;
+    thumbs.addEventListener("click", function () {
+        thumbs.style.color = 'blue';
+            likes +=1;
+            thumbs.innerHTML = likes;
+
+    })
+</script>
+</html>
